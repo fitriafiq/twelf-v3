@@ -16,7 +16,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "export-from-json": "^1.7.2",
-    "firebase": "^9.18.0",
+    "firebase": "^9.19.1",
     "pinia": "^2.0.33",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"

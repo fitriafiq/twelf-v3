@@ -105,7 +105,7 @@ label {
 
 .main-btn {
     width: 100%;
-    color: #fff;
+    color: #fff !important;
     background-color: #b1a785;
     border: 0;
     display: inline-block;

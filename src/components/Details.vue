@@ -47,6 +47,8 @@
 
                     <button @click="router.push({ name: 'rsvp' })" class="main-btn mt-3" data-aos="zoom-in-up"
                         data-aos-duration="1000">SILA SAHKAN<br>KEHADIRAN ANDA</button>
+                    <a href="https://mywishlist.online/w/w2qesq/nabiela-zuhaily-wedding-gifts-wishlist" target="_blank" class="main-btn mt-3" data-aos="zoom-in-up"
+                        data-aos-duration="1000"><font-awesome-icon icon="fa-solid fa-gift" /> &nbsp;HADIAH</a>
                 </div>
             </template>
             <template v-else-if="router.currentRoute.value.name === 'rsvp'">
@@ -63,8 +65,8 @@
                     <div class="mb-4" data-aos="zoom-out-right" data-aos-duration="1250" data-aos-delay="900">
                         <p class="mb-0">6 Mei 2023</p>
                         <p>Gold Coast Morib Resort, PT 294, Kawasan Kanchong
-                        Laut, Morib Beach,
-                        42700 Banting, Selangor</p>
+                            Laut, Morib Beach,
+                            42700 Banting, Selangor</p>
                     </div>
                     <hr>
                     <RSVPForm />

@@ -9,9 +9,9 @@
 
             <p class="hero-bride-initial position-absolute w-100" data-aos="fade-right" data-aos-duration="1500">ﻥ</p>
             <p class="hero-bride position-absolute w-100" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">Nabiela</p>
-            <img class="hero-middle position-absolute" data-aos="zoom-out-up" data-aos-duration="2000" data-aos-delay="1000" src="../assets/images/flower.png">
+            <img class="hero-middle position-absolute" data-aos="zoom-out-up" data-aos-duration="1750" data-aos-delay="800" src="../assets/images/flower.png">
             <p class="hero-groom-initial position-absolute w-100" data-aos="fade-left" data-aos-duration="1500">ﺯ</p>
-            <p class="hero-groom position-absolute w-100" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300">Zuhaili</p>
+            <p class="hero-groom position-absolute w-100" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300">Zuhaily</p>
 
             <div class="hero-date position-absolute w-100" data-aos="fade-up" data-aos-duration="1500">
                 <div class="col-5 mx-auto">
@@ -56,6 +56,10 @@
         font-family: "Glacial Indifference", sans-serif;
         font-size: 15px;
         letter-spacing: 1px;
+
+        img {
+            width: 115px;
+        }
     }
 
     @mixin bride-groom($size, $top, $left) {
@@ -68,25 +72,25 @@
     }
 
     .hero-bride {
-        @include bride-groom($size: 1.25rem, $top: 54%, $left: -29%);
+        @include bride-groom($size: 1.25rem, $top: 52%, $left: -29%);
     }
 
     .hero-bride-initial {
-        @include bride-groom($size: 6.5rem, $top: 45%, $left: -29%);
+        @include bride-groom($size: 6.5rem, $top: 42%, $left: -29%);
     }
 
     .hero-middle {
         top: 32%;
-        left: 35%;
-        width: 140px;
+        left: 37%;
+        width: 137px;
     }
 
     .hero-groom {
-        @include bride-groom($size: 1.25rem, $top: 54%, $left: 29%);
+        @include bride-groom($size: 1.25rem, $top: 52%, $left: 29%);
     }
 
     .hero-groom-initial {
-        @include bride-groom($size: 6.5rem, $top: 45%, $left: 29%);
+        @include bride-groom($size: 6.5rem, $top: 42%, $left: 29%);
     }
 
     .hero-date {

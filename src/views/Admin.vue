@@ -59,7 +59,6 @@ import { db } from '../firebase'
 import exportFromJSON from "export-from-json";
 
 const guestList = ref([])
-const filteredGuestList = ref([])
 const attendance = ref('yes')
 const search = ref('')
 
@@ -83,24 +82,22 @@ onMounted(() => {
 
 const guestAttendingCount = computed(() => {
     let count = 0
-    filteredGuestList.value = guestList.value.filter(guest => guest.attendance == 'yes')
-    filteredGuestList.value.forEach(guest => {
-        count += guest.total
-    })
+    guestList.value.filter(guest => guest.attendance == 'yes').forEach(guest => count += guest.total)
     return count
 })
 
 const guestNotAttendingCount = computed(() => {
-    return filteredGuestList.value = guestList.value.filter(guest => guest.attendance == 'no')
+    return guestList.value.filter(guest => guest.attendance == 'no')
 })
 
 const filteredGuest = computed(() => {
-    return filteredGuestList.value = guestList.value.filter(guest => guest.name.includes(search.value) && guest.attendance == attendance.value)
+    return guestList.value.filter(guest => guest.name.includes(search.value) && guest.attendance == attendance.value)
 })
 
 const downloadGuestList = () => {
     const exportGuestList = []
-    filteredGuestList.value.forEach(guest => {
+
+    guestList.value.filter(guest => guest.name.includes(search.value) && guest.attendance == attendance.value).forEach(guest => {
         let submittedDate = new Date(guest.datetime.seconds * 1000)
         let datetime = submittedDate.getDate() + '/' + submittedDate.getMonth() + '/' + submittedDate.getFullYear() + ' ' + submittedDate.getHours() + ':' + submittedDate.getMinutes()
         const exportGuest = {
@@ -112,6 +109,7 @@ const downloadGuestList = () => {
         }
         exportGuestList.push(exportGuest)
     })
+
     const data = exportGuestList
     const fileName = "guestlist";
     const exportType = exportFromJSON.types.csv
